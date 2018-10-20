@@ -28,7 +28,7 @@
         <td>Credit Hours</td>
     </tr>
     <% classname = 'rowA' %>
-    <% for course in @courses do %>
+    <% @courses.each do |course| %>
         <tr class=<%= classname %>>
             <td><%=course.course_num %></td>
             <td><%=course.department_id %></td>
