@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
   	new_student = Student.new(student_params) #Course.new(course_params) 
   	if new_student.save 
   	  flash[:notice] = "Student is added!"
-    	redirect_to root_path 
+    	redirect_to students_path 
   	else 
   	  flash[:warning] = "Error entering data in db!"
     	render 'new' 
