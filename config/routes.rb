@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
   #get 'welcome/index'
   root 'welcome#index'
-
+  #FIX: https://www.railstutorial.org/book/filling_in_the_layout/*
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :courses
   get 'courses' => 'courses#index'
   get 'courses/new' => 'courses#new'
   post 'courses' => 'courses#create'
-  
+
   resources :students
   get 'students' => 'students#index'
   get 'students/new' => 'students#new'
   post 'students' => 'students#create'
+  
 
   # You can have the root of your site routed with "root"
 
