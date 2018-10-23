@@ -23,3 +23,16 @@ class StudentsController < ApplicationController
       params.require(:student).permit(:major, :first_name, :last_name, :email, :student_id, :grad_year, :credits_taken)
   end
 end
+
+##FOR LOGIN/AUTHENTICATION/ACCOUNT MGMT:
+#https://www.railstutorial.org/book/basic_login
+#https://codepany.com/blog/rails-5-user-accounts-with-3-types-of-roles-devise-rails_admin-cancancan/
+#https://www.railstutorial.org/book/modeling_users
+#https://github.com/thoughtbot/clearance
+#https://github.com/binarylogic/authlogic
+#https://en.wikipedia.org/wiki/OAuth
+#https://github.com/plataformatec/devise
+#https://en.wikipedia.org/wiki/OpenID
+#https://github.com/ramhoj/bento
+#http://railsapps.github.io/rails-authorization.html
+#https://stormpath.com/blog/advanced-user-management-ruby-rails-and-sinatra
