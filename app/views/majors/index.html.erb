@@ -1,0 +1,31 @@
+<style>
+    .head{
+        background-color:rgb(41,92,77);
+        color: white;
+    }
+    
+    .rowA{background-color:rgb(185,217,235);}
+    
+    .rowB{background-color:white;}
+</style>
+<h1>List of Majors</h1>
+<%= link_to 'Home', root_path %>
+<%= link_to 'Add A Major', "majors/new" %>
+<%= link_to 'New Account', "students/new" %>
+<br /><br /><br />
+<table class='majorslist' border=1>
+    <tr class='head'>
+        <td>Majors</td>
+    </tr>
+    <% majorname = 'rowA' %>
+    <% @majors.each do |major| %>
+        <tr class=<%= majorname %>>
+            <td><%=major.major_name %></td>
+        </tr>
+        <% if majorname ==  'rowA' %>
+            <% majorname = 'rowB' %>
+        <% else %>
+            <% majorname = 'rowA' %>
+        <% end %>
+    <% end %>
+</table>

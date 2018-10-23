@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
   	new_course = Course.new(course_params) #Course.new(course_params) 
   	if new_course.save 
   	  flash[:notice] = "Course is added!"
-    	redirect_to root_path 
+    	redirect_to root_path
   	else 
   	  flash[:warning] = "Error entering data in db!"
     	render 'new' 
