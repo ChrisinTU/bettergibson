@@ -11,7 +11,7 @@ class MajorsController < ApplicationController
   	new_major = Major.new(major_params)
   	if new_major.save 
   	  flash[:notice] = "Major is added!"
-    	redirect_to root_path 
+    	redirect_to majors_path
   	else 
   	  flash[:warning] = "Error entering data in db!"
     	render 'new' 
