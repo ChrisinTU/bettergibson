@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   get 'students' => 'students#index'
   get 'students/new' => 'students#new'
   post 'students' => 'students#create'
+  
+  resources :majors
+  get 'majors' => 'majors#index'
+  get 'majors/new' => 'majors#new'
+  post 'majors' => 'majors#create'
 
   # You can have the root of your site routed with "root"
   root 'courses#index'
