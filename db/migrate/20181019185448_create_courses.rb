@@ -13,7 +13,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :end_time
       t.string :credits
       t.timestamps null: false
-      t.reference :major
+      # t.reference :major
     end
   end
 end
