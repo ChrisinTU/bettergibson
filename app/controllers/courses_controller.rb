@@ -18,6 +18,11 @@ class CoursesController < ApplicationController
   	end 
   end
   
+  def show
+      @course = Course.find(params[:department_id])
+      @majors = @course.major
+  end
+  
   private
   def course_params
       params.require(:course).permit(:course_num, :department_id, :course_code, :section, :name, :location, :instructor, :days, :start_time, :end_time, :credits)
