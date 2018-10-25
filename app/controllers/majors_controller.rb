@@ -25,7 +25,7 @@ class MajorsController < ApplicationController
   
   private
   def major_params
-    params.require(:major).permit(:major_name) 
-    # , :department_id
+    params.require(:major).permit(:major_name, :department_id) 
+    
   end
 end
