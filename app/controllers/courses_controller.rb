@@ -18,6 +18,12 @@ class CoursesController < ApplicationController
   	end 
   end
   
+  def destroy
+      @course = Course.find(params[:id]);
+      @course.destroy
+      redirect_to root_path, :notice => "The course has been deleted!"
+  end
+  
 #   def show
 #       @course = Course.find(params[:department_id])
 #       @majors = @course.major

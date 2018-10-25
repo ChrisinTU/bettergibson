@@ -8,8 +8,8 @@
 
 Student.create(major: 'Computer Science', first_name: 'Christopher', last_name: 'Louviere', email: 'clouvier@tulane.edu', student_id: '267008284', grad_year: '2020', credits_taken: '114')
 
-Major.create(major_name: 'Computer Science', department_id: 'CMPS')
-Major.create(major_name: 'Biomedical Engineering', department_id: 'BMEN')
+#Major.create(major_name: 'Computer Science', department_id: 'CMPS')
+#Major.create(major_name: 'Biomedical Engineering', department_id: 'BMEN')
 
 
 Course.create(course_num: '19345', department_id: 'CMPS', course_code: '1500', section: '01', name: 'Intro to Computer Science I', location: 'ST 302', instructor: 'Kurdia, Anastasia', days: 'MWF', start_time:'11:00am', end_time: '11:50am', credits:'4')

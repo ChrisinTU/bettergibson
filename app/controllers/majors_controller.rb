@@ -18,6 +18,12 @@ class MajorsController < ApplicationController
   	end 
   end
   
+  def destroy
+    @major = Major.find(params[:id])
+    @major.destroy
+    redirect_to root_path, :notice => "The major has been deleted!"
+  end
+  
     # def show
     # @major = major.find(params[:id])
     # @courses = @majors.courses

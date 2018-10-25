@@ -21,6 +21,7 @@
         <td>Grad. Year</td>
         <td>Major</td>
         <td>Credits Taken</td>
+        <td>Delete</td>
     </tr>
     <% classname = 'rowA' %>
     <% @students.each do |student| %>
@@ -32,6 +33,7 @@
             <td><%=student.grad_year %></td>
             <td><%=student.major %></td>
             <td><%=student.credits_taken %></td>
+            <td><%=link_to 'Delete', student_path(student), method: :delete %> </td>
         </tr>
         <% if classname ==  'rowA' %>
             <% classname = 'rowB' %>

@@ -16,11 +16,13 @@
 <table class='majorslist' border=1>
     <tr class='head'>
         <td>Majors</td>
+        <td>Delete</td>
     </tr>
     <% majorname = 'rowA' %>
     <% @majors.each do |major| %>
         <tr class=<%= majorname %>>
             <td><%=major.major_name %></td>
+            <td><%= link_to 'Delete', major_path(major), method: :delete %> </td>
         </tr>
         <% if majorname ==  'rowA' %>
             <% majorname = 'rowB' %>
