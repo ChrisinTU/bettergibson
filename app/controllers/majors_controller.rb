@@ -18,14 +18,19 @@ class MajorsController < ApplicationController
   	end 
   end
   
-    # def show
+    def course
     # @major = major.find(params[:id])
     # @courses = @majors.courses
-    # end
+    end
+    
+    def show
+    @major = Major.find(params[:id])
+    # @courses = @majors.courses
+    end
+    
   
   private
   def major_params
     params.require(:major).permit(:major_name, :department_id) 
-    
   end
 end
