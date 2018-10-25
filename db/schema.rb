@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181023024259) do
+ActiveRecord::Schema.define(version: 20181025001405) do
+
+  create_table "classes_majors", id: false, force: :cascade do |t|
+    t.integer "major_id", null: false
+    t.integer "class_id", null: false
+    t.index ["class_id"], name: "index_classes_majors_on_class_id"
+    t.index ["major_id"], name: "index_classes_majors_on_major_id"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string   "course_num"
@@ -32,6 +39,11 @@ ActiveRecord::Schema.define(version: 20181023024259) do
     t.string   "major_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "majors_students", id: false, force: :cascade do |t|
+    t.integer "student_id", null: false
+    t.integer "major_id",   null: false
   end
 
   create_table "students", force: :cascade do |t|
