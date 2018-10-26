@@ -28,8 +28,6 @@
         <td>Start</td>
         <td>Finish</td>
         <td>Credit Hours</td>
-        <td>Edit</td>
-        <td>Delete</td>
     </tr>
     <% classname = 'rowA' %>
     <% @courses.each do |course| %>
@@ -45,8 +43,8 @@
             <td><%=course.start_time %></td>
             <td><%=course.end_time %></td>
             <td><%=course.credits %></td>
-            <td><%= link_to 'Edit', edit_course_path(course) %></td>
-            <td><%= link_to 'Delete', course_path(course), method: :delete %> </td>
+            <td><%= link_to image_tag("buttons/editBut.png", :width => 30, :height => 30, :alt => "edit button"), edit_course_path(course) %></td>
+            <td><%= link_to image_tag("buttons/deleteBut.png", :width => 30, :height => 30, :alt => "delete button"), course_path(course), method: :delete %> </td>
         </tr>
         <% if classname ==  'rowA' %>
             <% classname = 'rowB' %>
