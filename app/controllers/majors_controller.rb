@@ -18,10 +18,23 @@ class MajorsController < ApplicationController
   	end 
   end
   
+  def edit
+      @major = Major.find(params[:id])
+  end
+  
+  def update
+      @major = Major.find(params[:id])
+      if @major.update_attributes(major_params)
+        redirect_to majors_path, :notice => "The major has been deleted!"
+      else
+        render "edit"
+      end
+  end
+  
   def destroy
     @major = Major.find(params[:id])
     @major.destroy
-    redirect_to root_path, :notice => "The major has been deleted!"
+    redirect_to majors_path, :notice => "The major has been deleted!"
   end
   
     # def show
