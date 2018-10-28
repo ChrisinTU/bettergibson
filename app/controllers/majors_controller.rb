@@ -10,12 +10,14 @@ class MajorsController < ApplicationController
   def create 
   	new_major = Major.new(major_params)
   	if new_major.save 
-  	  flash[:notice] = "Major is added!"
-    	redirect_to majors_path
+  	  
+  	  flash[:success] = "Major is added!"
+    	  redirect_to majors_path
   	else 
-  	  flash[:warning] = "Error entering data in db!"
+  	  flash[:danger] = "Error entering data in db!"
     	render 'new' 
   	end 
+  	
   end
   
   def edit
@@ -25,7 +27,8 @@ class MajorsController < ApplicationController
   def update
       @major = Major.find(params[:id])
       if @major.update_attributes(major_params)
-        redirect_to majors_path, :notice => "The major has been deleted!"
+        flash[:success] = "#{@major.major_name} major updated!"
+        redirect_to majors_path
       else
         render "edit"
       end
@@ -33,8 +36,9 @@ class MajorsController < ApplicationController
   
   def destroy
     @major = Major.find(params[:id])
+    flash[:success] = "#{@major.major_name} major deleted!"
     @major.destroy
-    redirect_to majors_path, :notice => "The major has been deleted!"
+    redirect_to majors_path
   end
   
     # def show
@@ -45,6 +49,5 @@ class MajorsController < ApplicationController
   private
   def major_params
     params.require(:major).permit(:major_name, :department_id) 
-    
   end
 end

@@ -12,13 +12,14 @@
   <body>
     <header>
       <!--FOR DEVISE: Ensure you have flash messages in app/views/layouts/application.html.erb. For example:-->
-       <!--<p class="notice"><%= notice %></p>-->
-       <!--<p class="alert"><%= alert %></p>-->
-
+       <!--<p class="notice"><%#= notice %></p>-->
+       <!--<p class="alert"><%#= alert %></p>-->
+        
       <h1>Tulane University Class Recommender</h1>
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
+      
       <%= render 'layouts/messages' %>
       
        <% if notice %>
