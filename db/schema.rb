@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181025063054) do
+ActiveRecord::Schema.define(version: 20181028224518) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "classes_majors", id: false, force: :cascade do |t|
     t.integer "major_id", null: false
@@ -33,6 +38,7 @@ ActiveRecord::Schema.define(version: 20181025063054) do
     t.string   "credits"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "majors_id"
   end
 
   create_table "majors", force: :cascade do |t|
