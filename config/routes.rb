@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   #get 'welcome/index'
   root 'welcome#index'
   #FIX: https://www.railstutorial.org/book/filling_in_the_layout/*
