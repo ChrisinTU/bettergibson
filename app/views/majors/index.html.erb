@@ -20,7 +20,7 @@
     <% majorname = 'rowA' %>
     <% @majors.each do |major| %>
         <tr class=<%= majorname %>>
-            <td><%=major.major_name %></td>
+            <td><%=link_to(major.major_name, major_path(major)) %></td>
         </tr>
         <% if majorname ==  'rowA' %>
             <% majorname = 'rowB' %>

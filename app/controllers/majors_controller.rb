@@ -19,7 +19,9 @@ class MajorsController < ApplicationController
     end
   
     def show
-      
+      @major = Major.find(params[:id])
+      @courses = @major.courses
+      render :layout => nil
     end
   
     

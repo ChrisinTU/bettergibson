@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   end
   get 'majors' => 'majors#index'
   get 'majors/new' => 'majors#new'
-  get 'majors/:department_id' => 'majors#course'
+  get 'majors/:id' => 'majors#show', as: 'show_courses_in_this_major'
   post 'majors' => 'majors#create'
 
   # You can have the root of your site routed with "root"
