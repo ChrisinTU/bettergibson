@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
-  get 'majors/course' => 'majors#course'
   
   resources :courses
   get 'courses' => 'courses#index'
@@ -18,10 +17,12 @@ Rails.application.routes.draw do
   post 'students' => 'students#create'
   
 
-  resources :majors
+  resources :majors do
+    resources :courses
+  end
   get 'majors' => 'majors#index'
   get 'majors/new' => 'majors#new'
-
+  get 'majors/:department_id' => 'majors#course'
   post 'majors' => 'majors#create'
 
   # You can have the root of your site routed with "root"
