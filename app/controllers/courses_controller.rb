@@ -18,6 +18,25 @@ class CoursesController < ApplicationController
   	end 
   end
   
+  def edit
+      @course = Course.find(params[:id])
+  end
+  
+  def update
+      @course = Course.find(params[:id])
+      if @course.update_attributes(course_params)
+        redirect_to course_path, :notice => "The course has been updated!"
+      else
+        render "edit"
+      end
+  end
+  
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+    redirect_to majors_path, :notice => "The course has been deleted!"
+  end
+  
 #   def show
 #       @course = Course.find(params[:department_id])
 #       @majors = @course.major
