@@ -8,5 +8,5 @@
 - Siyang Hu
 - Elizabeth Weathersby
 
-## Description:
+## Description
 A course recommender designed to assist Tulane University students in creating class schedules.  
