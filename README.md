@@ -1,6 +1,6 @@
 
 
-Tulane University Class Recommender 
+== Tulane University Class Recommender 
 
 Developers:
 Christopher Louviere
