@@ -20,6 +20,10 @@ Rails.application.routes.draw do
   get 'majors' => 'majors#index'
   get 'majors/new' => 'majors#new'
   post 'majors' => 'majors#create'
+  
+  resources :accounts
+  get 'accounts' => 'accounts#index'
+  
 
   # You can have the root of your site routed with "root"
 
