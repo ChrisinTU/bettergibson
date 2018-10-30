@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20181028224518) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "course_num"
-    t.string   "major_id"
+    t.integer  "major_id"
     t.string   "course_code"
     t.string   "section"
     t.string   "name"
@@ -44,13 +44,17 @@ ActiveRecord::Schema.define(version: 20181028224518) do
   create_table "majors", force: :cascade do |t|
     t.string   "major_name"
     t.string   "major_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "students_id"
+    t.index ["students_id"], name: "index_majors_on_students_id"
   end
 
   create_table "majors_students", id: false, force: :cascade do |t|
     t.integer "student_id", null: false
     t.integer "major_id",   null: false
+    t.index ["major_id"], name: "index_majors_students_on_major_id"
+    t.index ["student_id"], name: "index_majors_students_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|

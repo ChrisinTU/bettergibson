@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration[5.0]
       t.string :first_name
       t.string :last_name
       t.string :email
-      #t.string :student_id --may conflict with Rails associations
+      #t.string :student_id
       t.string :grad_year
       t.string :credits_taken
       t.timestamps

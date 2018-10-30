@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Student.create(major: 'Computer Science', first_name: 'Christopher', last_name: 'Louviere', email: 'clouvier@tulane.edu', student_id: '267008284', grad_year: '2020', credits_taken: '114')
+Student.create(major: 'Computer Science', first_name: 'Christopher', last_name: 'Louviere', email: 'clouvier@tulane.edu', grad_year: '2020', credits_taken: '114')
 
 Major.create(major_name: 'Computer Science', major_id: 'CMPS')
 Major.create(major_name: 'Biomedical Engineering', major_id: 'BMEN')
