@@ -21,7 +21,6 @@ class MajorsController < ApplicationController
     def show
       @major = Major.find(params[:id])
       a = @major.major_id
-      puts a
       @courses = Course.where('major_id = ?', a)
     #   @courses = Course.where("major_id = 'CMPS'")
     end
