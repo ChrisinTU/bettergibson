@@ -15,6 +15,7 @@ class CreateCourses < ActiveRecord::Migration
       t.timestamps null: false
       # t.references :majors
       t.belongs_to :major
+      t.references :majors
     end
   end
 end

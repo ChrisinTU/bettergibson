@@ -10,12 +10,36 @@ class StudentsController < ApplicationController
   def create 
   	new_student = Student.new(student_params) #Course.new(course_params) 
   	if new_student.save 
-  	  flash[:notice] = "Student is added!"
+  	  flash[:success] = "Student has been added!"
     	redirect_to students_path 
   	else 
-  	  flash[:warning] = "Error entering data in db!"
+  	  flash[:danger] = "Error entering data in db!"
     	render 'new' 
   	end 
+  end
+  
+  def edit
+      @student = Student.find(params[:id])
+  end
+  
+  def update
+      @student = Student.find(params[:id])
+      if @student.update_attributes(student_params)
+          flash[:success] = "Student, #{@student.first_name}" "#{@student.last_name}, has been updated!"
+
+          redirect_to students_path, :success => "The student is updated!"
+      else
+          flash[:danger] = "Student, #{@student.first_name}" "#{@student.last_name}, cannot be updated!"
+
+          render "edit"
+      end
+  end
+  
+  def destroy
+    @student = Student.find(params[:id])
+    flash[:success] = "Student has been deleted!"
+    @student.destroy
+    redirect_to students_path
   end
   
   private
@@ -25,14 +49,4 @@ class StudentsController < ApplicationController
 end
 
 ##FOR LOGIN/AUTHENTICATION/ACCOUNT MGMT:
-#https://www.railstutorial.org/book/basic_login
-#https://codepany.com/blog/rails-5-user-accounts-with-3-types-of-roles-devise-rails_admin-cancancan/
-#https://www.railstutorial.org/book/modeling_users
-#https://github.com/thoughtbot/clearance
-#https://github.com/binarylogic/authlogic
-#https://en.wikipedia.org/wiki/OAuth
 #https://github.com/plataformatec/devise
-#https://en.wikipedia.org/wiki/OpenID
-#https://github.com/ramhoj/bento
-#http://railsapps.github.io/rails-authorization.html
-#https://stormpath.com/blog/advanced-user-management-ruby-rails-and-sinatra

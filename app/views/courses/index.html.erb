@@ -10,9 +10,6 @@
 </style>
 <h1>List of Courses</h1>
 <%= link_to 'Add Courses', "courses/new" %>
-<%= link_to 'View Students', "students" %>
-<%= link_to 'New Account', "students/new" %>
-<%= link_to 'View Majors', "majors" %>
 
 <br /><br /><br />
 <table class='courseslist' border=1>
@@ -43,6 +40,8 @@
             <td><%=course.start_time %></td>
             <td><%=course.end_time %></td>
             <td><%=course.credits %></td>
+            <td><%= link_to image_tag("buttons/editBut.png", :width => 30, :height => 30, :alt => "edit button"), edit_course_path(course) %></td>
+            <td><%= link_to image_tag("buttons/deleteBut.png", :width => 30, :height => 30, :alt => "delete button"), course_path(course), method: :delete %> </td>
         </tr>
         <% if classname ==  'rowA' %>
             <% classname = 'rowB' %>

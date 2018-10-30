@@ -9,9 +9,7 @@
     .rowB{background-color:white;}
 </style>
 <h1>List of Majors</h1>
-<%= link_to 'Home', root_path %>
 <%= link_to 'Add A Major', "majors/new" %>
-<%= link_to 'New Account', "students/new" %>
 <br /><br /><br />
 <table class='majorslist' border=1>
     <tr class='head'>
@@ -21,6 +19,9 @@
     <% @majors.each do |major| %>
         <tr class=<%= majorname %>>
             <td><%=link_to(major.major_name, major_path(major)) %></td>
+            <td><%=major.major_name %></td>
+            <td width="30" align="center"><%= link_to image_tag("buttons/editBut.png", :width => 30, :height => 30, :alt => "edit button"), edit_major_path(major) %></td>
+            <td width="30" align="center"><%= link_to image_tag("buttons/deleteBut.png", :width => 30, :height => 30, :alt => "delete button"), major_path(major), method: :delete %></td>
         </tr>
         <% if majorname ==  'rowA' %>
             <% majorname = 'rowB' %>
