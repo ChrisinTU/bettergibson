@@ -41,13 +41,16 @@ class MajorsController < ApplicationController
     redirect_to majors_path
   end
   
-    # def show
-    # @major = major.find(params[:id])
-    # @courses = @majors.courses
-    # end
-  
+  def show
+      @major = Major.find(params[:id])
+      a = @major.major_id
+      puts a
+      @courses = Course.where('major_id = ?', a)
+    #   @courses = Course.where("major_id = 'CMPS'")
+  end
+
   private
   def major_params
-    params.require(:major).permit(:major_name, :department_id) 
+    params.require(:major).permit(:major_name, :major_id) 
   end
 end

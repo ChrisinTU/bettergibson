@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   #FIX: https://www.railstutorial.org/book/filling_in_the_layout/*
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  
+  
   resources :courses
   get 'courses' => 'courses#index'
   get 'courses/new' => 'courses#new'
@@ -16,9 +18,12 @@ Rails.application.routes.draw do
   post 'students' => 'students#create'
   
 
-  resources :majors
+  resources :majors do
+    resources :courses
+  end
   get 'majors' => 'majors#index'
   get 'majors/new' => 'majors#new'
+  get 'majors/:id' => 'majors#show', as: 'show_courses_in_this_major'
   post 'majors' => 'majors#create'
   
   resources :accounts

@@ -1,5 +1,5 @@
 class Major < ApplicationRecord
     has_many :courses
-    belongs_to :students
+    belongs_to :student
 
 end

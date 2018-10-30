@@ -15,7 +15,8 @@ class CoursesController < ApplicationController
   	else 
   	  flash[:danger] = "Error entering data in db!"
     	render 'new' 
-  	end 
+  	end
+  	
   end
   
   def edit
@@ -47,6 +48,6 @@ class CoursesController < ApplicationController
   
   private
   def course_params
-      params.require(:course).permit(:course_num, :department_id, :course_code, :section, :name, :location, :instructor, :days, :start_time, :end_time, :credits)
+      params.require(:course).permit(:course_num, :majors_id, :course_code, :section, :name, :location, :instructor, :days, :start_time, :end_time, :credits)
   end
 end

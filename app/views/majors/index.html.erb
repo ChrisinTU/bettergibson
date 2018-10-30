@@ -18,6 +18,7 @@
     <% majorname = 'rowA' %>
     <% @majors.each do |major| %>
         <tr class=<%= majorname %>>
+            <td><%=link_to(major.major_name, major_path(major)) %></td>
             <td><%=major.major_name %></td>
             <td width="30" align="center"><%= link_to image_tag("buttons/editBut.png", :width => 30, :height => 30, :alt => "edit button"), edit_major_path(major) %></td>
             <td width="30" align="center"><%= link_to image_tag("buttons/deleteBut.png", :width => 30, :height => 30, :alt => "delete button"), major_path(major), method: :delete %></td>
