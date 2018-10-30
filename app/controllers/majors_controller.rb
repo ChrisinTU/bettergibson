@@ -20,12 +20,13 @@ class MajorsController < ApplicationController
   
     def show
       @major = Major.find(params[:id])
-      @courses = @major.courses
-      render :layout => nil
+      a = @major.major_id
+      puts a
+      @courses = Course.where('major_id = ?', a)
+    #   @courses = Course.where("major_id = 'CMPS'")
     end
   
-    
-  
+
   private
   def major_params
     params.require(:major).permit(:major_name, :major_id) 

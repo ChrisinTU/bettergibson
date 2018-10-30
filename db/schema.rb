@@ -31,12 +31,13 @@ ActiveRecord::Schema.define(version: 20181025001405) do
     t.string   "start_time"
     t.string   "end_time"
     t.string   "credits"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "majors", force: :cascade do |t|
     t.string   "major_name"
+    t.string   "major_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
