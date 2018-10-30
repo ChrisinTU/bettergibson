@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 20181028224518) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "student_id"
     t.string   "grad_year"
     t.string   "credits_taken"
     t.datetime "created_at",    null: false
