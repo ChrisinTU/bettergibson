@@ -38,7 +38,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     flash[:success] = "#{@course.name} course deleted!"
     @course.destroy
-    redirect_to majors_path
+    redirect_to courses_path
   end
   
 #   def show
