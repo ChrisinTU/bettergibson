@@ -7,9 +7,15 @@ main {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   }
-.navbar_link{
-    padding: 5px 10px 5px;
+.navbar-link{
+  color: white;
 }
+a:link,a:visited,a:hover,a:active{ /*link states*/
+  /*color: black;*/
+  text-decoration: none;
+
+}        
+
 navbar-link, header {
   border: 1px solid #d4d4d4;
   /*background-image: linear-gradient(to bottom, green, #003306);*/
@@ -31,7 +37,7 @@ navbar-link, header {
 h1, h2, h3, h4{
     font-family: 'Open Sans', sans-serif;
 }
- p, li, ul, ol, a, link{
+ p, li, ul, ol, a{
     font-family: 'Open Sans', sans-serif;
  }
 table, th, td{

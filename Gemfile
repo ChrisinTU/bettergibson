@@ -11,12 +11,21 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise' #for user login/authentication
+#gem "cancan"
 #for devise:
 #gem "hpricot"
 #gem "ruby_parser"
-
+#https://github.com/activeadmin/activeadmin
+#https://github.com/RailsApps/rails-devise-pundit
+#https://github.com/mohitjain/social-login-in-rails
+#Weak PWs: https://github.com/bitzesty/devise_zxcvbn
+#for cancan: https://github.com/kristianmandrup/cantango
+#https://github.com/plataformatec/devise#strong-parameters
 gem 'bootstrap', '~> 4.1', '>= 4.1.3' #bootstrap for CSS/HTML (UX/UI)
+#gem 'bootstrap', '~> 4.0.0.alpha6'
+#gem 'sprockets-rails', '~> 3.2.1'
 # Use jquery as the JavaScript library
+gem 'popper_js'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
