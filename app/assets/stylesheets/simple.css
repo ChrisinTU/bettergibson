@@ -5,9 +5,12 @@ main {
   background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
-  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
   }
-header {
+.navbar_link{
+    padding: 5px 10px 5px;
+}
+navbar-link, header {
   border: 1px solid #d4d4d4;
   /*background-image: linear-gradient(to bottom, green, #003306);*/
   /*background-color: #f9f9f9;*/
