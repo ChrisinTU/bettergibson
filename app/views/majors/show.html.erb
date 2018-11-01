@@ -12,9 +12,7 @@
 <table class='courseslist' border=1>
     <tr class='head'>
         <td>CRN</td>
-        <td>Dept. Code</td>
-        <td>Course Number</td>
-        <td>Section</td>
+        <td>Course Code</td>
         <td>Course Name</td>
         <td>Location</td>
         <td>Instructor</td>
@@ -27,9 +25,7 @@
     <% @courses.each do |course| %>
         <tr class=<%= classname %>>
             <td><%=course.course_num %></td>
-            <td><%=course.major_id %></td>
-            <td><%=course.course_code %></td>
-            <td><%=course.section %></td>
+            <td><%=course.major_id  + '-' + course.course_code  + '-' + course.section %></td>
             <td><%=course.name %></td>
             <td><%=course.location %></td>
             <td><%=course.instructor %></td>
