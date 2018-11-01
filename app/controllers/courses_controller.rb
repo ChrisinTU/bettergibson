@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
   	new_course = Course.new(course_params) #Course.new(course_params) 
   	if new_course.save 
   	  flash[:success] = "Course is added!"
-    	redirect_to root_path
+    	redirect_to courses_path
   	else 
   	  flash[:danger] = "Error entering data in db!"
     	render 'new' 
@@ -27,7 +27,7 @@ class CoursesController < ApplicationController
       @course = Course.find(params[:id])
       if @course.update_attributes(course_params)
         flash[:success] = "#{@course.name} course updated!"
-        redirect_to course_path
+        redirect_to courses_path
       else
         flash[:danger] = "#{@course.name} cannot be updated!"
         render "edit"
