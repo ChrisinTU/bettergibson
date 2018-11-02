@@ -13,8 +13,14 @@
     
     <!--Major-->
     <div class="form-group">
-    <%= f.label :major_id, class: "control-label" %>
-    <%= f.text_field :major_id, :required => true, class: "form-control", :size=>"50"%>
+        <%= f.label :major_id, class: "control-label" %>
+        <!--<%= f.text_field :major_id, :required => true, class: "form-control", :size=>"50"%>-->
+        <div class="form-group">
+            <%= f.select(:major_id, options_for_select([
+            ['Biomedical Engineering','BME'],
+            ['Computer Science','CMPS'],
+            ['Finance','FNNC']])) %>
+        </div>
     </div>
     
     <!--Course Code-->
