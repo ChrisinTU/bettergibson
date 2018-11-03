@@ -41,10 +41,7 @@ class CoursesController < ApplicationController
     redirect_to courses_path
   end
   
-#   def show
-#       @course = Course.find(params[:department_id])
-#       @majors = @course.major
-#   end
+  
   
   private
   def course_params
