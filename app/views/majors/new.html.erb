@@ -1,20 +1,23 @@
-<h1>Add a New Major</h1>
-
-<br /><br />
-
-<div class="well">
-
-    <%= form_for @new_major do |f| %>
+<div class = "container">
+    <h1>Add A New Major</h1>
     
-    <div class="form-group"> 
-    <%= f.label :major_name, class: "control-label" %>
-    <%= f.text_field :major_name, :required => true, class: "form-control" %>
-    </div>
+    <br /><br />
     
-    <div class="actions"> 
-    <%= f.submit "Create", :required => true, class: "btn btn-light" %>
-    </div> 
-    <% end %>
+    <div class="well">
+    
+        <%= form_for @new_major do |f| %>
+        
+        <div class="form-group"> 
+        <%= f.label :major_name, class: "control-label" %>
+        <%= f.text_field :major_name, :required => true, class: "form-control" %>
+        </div>
+        
+        <div class="actions"> 
+        <%= f.submit "Create", :required => true, class: "btn btn-light" %>
+        </div> 
+        <% end %>
+        </div>
+        
     </div>
 </div>
     
