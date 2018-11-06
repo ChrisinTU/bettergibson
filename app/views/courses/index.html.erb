@@ -45,6 +45,7 @@
                 <td><%=course.start_time %></td>
                 <td><%=course.end_time %></td>
                 <td><%=course.credits %></td>
+               
                 <td><%= link_to image_tag("buttons/editBut.png", :width => 30, :height => 30, :alt => "edit button"), edit_course_path(course) %></td>
                 <td><%= link_to image_tag("buttons/deleteBut.png", :width => 30, :height => 30, :alt => "delete button"), course_path(course), method: :delete %> </td>
             </tr>

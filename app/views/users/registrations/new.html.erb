@@ -8,7 +8,7 @@
     
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, placeholder:"xxx@tulane.edu", autofocus: true, autocomplete: "email" %>
       </div>
     
       <div class="field">
@@ -25,7 +25,9 @@
       </div>
     
       <div class="actions">
+        <div class="btn btn-outline-success my-2 my-sm-0">
         <%= f.submit "Sign up" %>
+        </div>
       </div>
     <% end %>
     

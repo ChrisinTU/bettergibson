@@ -136,11 +136,11 @@ Course.create(course_num: '19345', major_code:'SPAN', course_code: '1500', secti
 Course.create(course_num: '38295', major_code:'SPAN', course_code: '4610', section: '81', name: 'Topics in Latin Amer Cinema ', location: 'Uptown', instructor: 'Gama de Cossio, Borja', days: 'TH', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 3)
 
 # Russian
-Course.create(course_num: '23085', major_code:'RUSS', course_code: '2300', section: '81', name: 'Elementary Russian II ', location: 'Uptown', instructor: 'Zhigunova, Lidia', days: 'T', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 3)
-Course.create(course_num: '74473', major_code:'RUSS', course_code: '2200', section: '01', name: 'Soviet Jewish Experience ', location: 'Uptown', instructor: 'Zhigunova, Lidia', days: 'MWF', start_time:'12:00pm', end_time: '12:50pm', credits:'3', major_id: 1)
-Course.create(course_num: '37232', major_code:'RUSS', course_code: '3030', section: '01', name: 'Cultural Space of Siberia ', location: 'Uptown', instructor: 'Brumfield, William', days: 'MWF', start_time:'9:00am', end_time: '9:50am', credits:'3', major_id: 2)
-Course.create(course_num: '86632', major_code:'RUSS', course_code: '6080', section: '01', name: 'Independent Study', location: 'Uptown', instructor: 'Staff, Tulane', days: 'M', start_time:'5:00pm', end_time: '7:30pm', credits:'3', major_id: 2)
-Course.create(course_num: '37229', major_code:'RUSS', course_code: '2310', section: '01', name: 'Honors Thesis', location: 'Uptown', instructor: 'Staff, Tulane', days: 'MWF', start_time:'10:00am', end_time: '10:50am', credits:'3', major_id: 2)
+Course.create(course_num: '23085', major_code:'RUSS', course_code: '2300', section: '81', name: 'Elementary Russian II ', location: 'Uptown', instructor: 'Zhigunova, Lidia', days: 'T', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 7)
+Course.create(course_num: '74473', major_code:'RUSS', course_code: '2200', section: '01', name: 'Soviet Jewish Experience ', location: 'Uptown', instructor: 'Zhigunova, Lidia', days: 'MWF', start_time:'12:00pm', end_time: '12:50pm', credits:'3', major_id: 7)
+Course.create(course_num: '37232', major_code:'RUSS', course_code: '3030', section: '01', name: 'Cultural Space of Siberia ', location: 'Uptown', instructor: 'Brumfield, William', days: 'MWF', start_time:'9:00am', end_time: '9:50am', credits:'3', major_id: 7)
+Course.create(course_num: '86632', major_code:'RUSS', course_code: '6080', section: '01', name: 'Independent Study', location: 'Uptown', instructor: 'Staff, Tulane', days: 'M', start_time:'5:00pm', end_time: '7:30pm', credits:'3', major_id: 7)
+Course.create(course_num: '37229', major_code:'RUSS', course_code: '2310', section: '01', name: 'Honors Thesis', location: 'Uptown', instructor: 'Staff, Tulane', days: 'MWF', start_time:'10:00am', end_time: '10:50am', credits:'3', major_id: 7)
 
 # Chemistry
 Course.create(course_num: '38295', major_code:'CHEM', course_code: '4610', section: '81', name: 'General Chemistry II', location: 'Uptown', instructor: 'Lopreore, Courtney', days: 'TH', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 3)
