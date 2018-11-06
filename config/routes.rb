@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
   #devise_for :users
   devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
+        sessions: 'users/sessions',
+        registrations: 'users/registrations'
+        #, registrations: 'user/registrations'
+  }
+  #devise_for :users, controllers: { 
+    #registrations: 'users/registrations' }
+
+  #You can also override 
+  #after_sign_in_path_for and after_sign_out_path_
+  #for to customize your redirect hooks.
+
   #get 'welcome/index'
   root 'welcome#index'
   #FIX: https://www.railstutorial.org/book/filling_in_the_layout/*
