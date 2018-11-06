@@ -23,6 +23,7 @@ Major.create(major_name: 'Finance', major_id: 'FINE')
 Major.create(major_name: 'English', major_id: 'ENGL')
 
 
+#<<<<<<< Updated upstream
 #Writing
 
 Course.create(course_num: '23831', major_code:'ENGL', course_code: '1010', section: '01', name: 'Writing', location: 'NH 202', instructor: 'Womack', days: 'MWF', start_time:'9:00am', end_time: '9:50am', credits:'4', major_id: 12)
@@ -159,3 +160,32 @@ Course.create(course_num: '37229', major_code:'CHEM', course_code: '2310', secti
 Course.create(course_num: '19345', major_code:'CHEM', course_code: '1500', section: '01', name: 'Computational Quamtum Chem ', location: 'Uptown', instructor: 'Donahue, James', days: 'MWF', start_time:'11:00am', end_time: '11:50am', credits:'4', major_id: 1)
 Course.create(course_num: '38295', major_code:'CHEM', course_code: '4610', section: '81', name: 'Spec. Topics in Physical Chem ', location: 'Uptown', instructor: '	Fink, Mark', days: 'TH', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 3)
 
+#=======
+Course.create(course_num: '19345', major_code:'CMPS', course_code: '1500', section: '01', name: 'Intro to Computer Science I', location: 'ST 302', instructor: 'Kurdia, Anastasia', days: 'MWF', start_time:'11:00am', end_time: '11:50am', credits:'4', major_id: 1)
+Course.create(course_num: '38295', major_code:'CPST', course_code: '4610', section: '81', name: 'Network Adminstration', location: 'Elmwood', instructor: 'Le', days: 'TH', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 3)
+Course.create(course_num: '23085', major_code:'CPST', course_code: '2300', section: '81', name: 'Database Fundamentals', location: 'Elmwood', instructor: 'Sun', days: 'T', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 3)
+Course.create(course_num: '74473', major_code:'CMPS', course_code: '2200', section: '01', name: 'Intro to Algorithms ', location: 'ST 302', instructor: 'Mettu, Ramgopal', days: 'MWF', start_time:'12:00pm', end_time: '12:50pm', credits:'3', major_id: 1)
+Course.create(course_num: '37232', major_code:'BMEN', course_code: '3030', section: '01', name: 'Anatomy & Physio for Engr', location: 'Boggs 104', instructor: 'Dancisak, Michael', days: 'MWF', start_time:'9:00am', end_time: '9:50am', credits:'3', major_id: 2)
+Course.create(course_num: '86632', major_code:'BMEN', course_code: '6080', section: '01', name: 'Tech Invent &Commercialization ', location: 'Boggs 104', instructor: 'Gilbertson, Lars', days: 'M', start_time:'5:00pm', end_time: '7:30pm', credits:'3', major_id: 2)
+Course.create(course_num: '37229', major_code:'BMEN', course_code: '2310', section: '01', name: 'Product & Experimental Design ', location: 'Boggs 104', instructor: 'Brown, Jonathon', days: 'MWF', start_time:'10:00am', end_time: '10:50am', credits:'3', major_id: 2)
+
+#User.create(email: 'admin@admin.com', encrypted_password: 'password', admin => true, )
+
+#user = User.new
+#user.email = 'test@example.com'
+#user.encrypted_password = '#$taawktljasktlw4aaglj'
+#user.save!
+#user = User.create! :name => 'John Doe', :email => 'john@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
+#user = User.new(:email => "admin@xxxxx.xxx",:password=> "123456", :password_confirmation => "123456")
+#user.skip_confirmation!
+#user.save!
+
+user = User.new(email: 'admin@bg.com', password: 'password!', password_confirmation: 'password!', admin: true)
+user.skip_confirmation!
+user.save!
+
+  User.create!([
+  {email: "admin@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:02:10", last_sign_in_at: "2018-02-10 14:02:10", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true},
+  {email: "noah@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:03:01", last_sign_in_at: "2018-02-10 14:03:01", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false},
+])
+#>>>>>>> Stashed changes

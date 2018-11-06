@@ -3,13 +3,15 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     create_table :users do |t|
       #change_column :users, :email, :string, :null => true
       #remove_index :users, :email
-      #t.string :major
-      #t.string :first_name
-      #t.string :last_name
-      #t.string :email
+      #added from here to
+      t.string :major
+      t.string :first_name
+      t.string :last_name
+      t.string :email
       #t.string :student_id
-      #t.string :grad_year
-      #t.string :credits_taken
+      t.string :grad_year
+      t.string :credits_taken
+      #here
       t.database_authenticatable
       t.confirmable
       t.recoverable
