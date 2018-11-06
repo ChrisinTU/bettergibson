@@ -25,7 +25,7 @@
     <% @courses.each do |course| %>
         <tr class=<%= classname %>>
             <td><%=course.course_num %></td>
-            <!--<td><%=course.major_code  + '-' + course.course_code  + '-' + course.section %></td>-->
+            <td><%=course.major_id.to_s  + '-' + course.course_code  + '-' + course.section %></td>
             <td><%=course.name %></td>
             <td><%=course.location %></td>
             <td><%=course.instructor %></td>
