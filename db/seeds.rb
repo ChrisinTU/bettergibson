@@ -10,6 +10,7 @@ Student.create(major: 'Computer Science', first_name: 'Christopher', last_name: 
 
 Major.create(major_name: 'Computer Science', major_id: 'CMPS')
 Major.create(major_name: 'Biomedical Engineering', major_id: 'BMEN')
+Major.create(major_name: 'Computing Systems & Tech.', major_id: 'CPST')
 Major.create(major_name: 'English', major_id: 'ENGL')
 Major.create(major_name: 'Finance', major_id: 'FINE')
 Major.create(major_name: 'Economics', major_id: 'ECON')
