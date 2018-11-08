@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20181106003726) do
-=======
 ActiveRecord::Schema.define(version: 20181106045641) do
->>>>>>> 397482f3d4191e521640c40f2f89b023d55a29fc
 
   create_table "accounts", force: :cascade do |t|
     t.datetime "created_at", null: false
