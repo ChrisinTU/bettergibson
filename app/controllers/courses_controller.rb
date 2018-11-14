@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
     def index
-        @courses = Course.all
+        @courses = Course.order("major_id").page(params[:page]).per_page(10)
     end
     
     def new
