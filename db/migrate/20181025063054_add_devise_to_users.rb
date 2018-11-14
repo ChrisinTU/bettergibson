@@ -4,7 +4,9 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.0]
   def self.up
     change_table :users do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
+      #if already defined in create_users (just need to change)
+      t.change :email, :string,     :null => false, :default => ""
+      #t.string :email,          null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
      
       ## Recoverable
@@ -14,11 +16,17 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.0]
       ## Rememberable
       t.datetime :remember_created_at
       #added from here to:
-      t.string :major
-      t.string :first_name
-      t.string :last_name
-      t.integer :credits_taken
-      t.integer :grad_year
+      #if already defined in create_users (just need to change)
+      t.change :major, :string,          :null => false, :default => ""
+      t.change :first_name, :string,     :null => false, :default => ""
+      t.change :last_name, :string,     :null => false, :default => ""
+      t.change :credits_taken, :integer,     :null => false, :default => ""
+      t.change :grad_year, :integer,     :null => false, :default => ""
+      #t.string :major
+      #t.string :first_name
+      #t.string :last_name
+      #t.integer :credits_taken
+      #t.integer :grad_year
       #here
       
       ## Trackable
