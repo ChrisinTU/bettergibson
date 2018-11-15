@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  primary_major: MyString
+  interest_1: MyString
+  interest_2: MyString
+  interest3: MyString
+
+two:
+  primary_major: MyString
+  interest_1: MyString
+  interest_2: MyString
+  interest3: MyString
