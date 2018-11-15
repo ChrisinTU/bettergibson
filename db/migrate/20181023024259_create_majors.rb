@@ -5,6 +5,7 @@ class CreateMajors < ActiveRecord::Migration[5.0]
       t.string :major_id
       t.timestamps
       t.references :students
+      t.belongs_to :user
     end
   end
 end
