@@ -1,0 +1,23 @@
+<h1>Recommender</h1>
+
+<%= form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :primary_major %><br />
+    <%= f.collection_select :primary_major, Major.order(:major_name), :id, :major_name, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_1 %><br />
+    <%= f.collection_select :interest_1, Major.order(:major_name), :id, :major_name, include_blank: true %>
+  </div>
+   <div class="field">
+    <%= f.label :interest_2 %><br />
+    <%= f.collection_select :interest_2, Major.order(:major_name), :id, :major_name, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :interest3 %><br />
+    <%= f.collection_select :interest3, Major.order(:major_name), :id, :major_name, include_blank: true %>
+  </div>
+  <br />
+  <div class="actions"><%= f.submit "Search" %></div>
+
+<% end %>

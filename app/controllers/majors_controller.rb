@@ -6,9 +6,6 @@ class MajorsController < ApplicationController
     def new
         @new_major = Major.new
     end
-  
-  
-  
 
   def create 
   	new_major = Major.new(major_params)

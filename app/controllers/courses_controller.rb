@@ -1,11 +1,11 @@
 class CoursesController < ApplicationController
-    def index
-        @courses = Course.order("major_id").page(params[:page]).per_page(10)
-    end
+  def index
+    @courses = Course.order("major_id").page(params[:page]).per_page(10)
+  end
     
-    def new
-        @new_course = Course.new
-    end
+  def new
+    @new_course = Course.new
+  end
     
   def create 
   	new_course = Course.new(course_params) #Course.new(course_params) 
