@@ -24,6 +24,10 @@ class ApplicationController < ActionController::Base
     #user_params.permit(:username, :email)
   end
   
+  #added from: https://www.adrianprieto.com/how-to-setup-devise-and-omniauth-for-your-rails-application/
+  def after_sign_in_path_for(resource)
+    request.env['omniauth.origin'] || root_path
+  end
   #def devise_parameter_sanitizer
     #if resource_class == User
       #User::ParameterSanitizer.new(User, :user, params)

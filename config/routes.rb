@@ -2,9 +2,20 @@ Rails.application.routes.draw do
   #devise_for :users
   devise_for :users, controllers: {
         sessions: 'users/sessions',
-        registrations: 'users/registrations'
+        registrations: 'users/registrations',
         #, registrations: 'user/registrations'
+        omniauth_callbacks: 'users/omniauth_callbacks' 
   }
+  #if you want user logged in vs non-logged in to have different root page.
+  #sets up the log in page as root path for an unauthenticated user.
+  #authenticated :user do
+      #root 'welcome#index', as: 'authenticated_root'
+    #end
+  #devise_scope :user do
+    #root 'devise/sessions#new'
+  #end
+  
+
   #devise_for :users, controllers: { 
     #registrations: 'users/registrations' }
 
@@ -88,4 +99,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
