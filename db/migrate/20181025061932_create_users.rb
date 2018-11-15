@@ -6,8 +6,8 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.string :grad_year
-      t.string :credits_taken
+      t.integer :grad_year
+      t.integer :credits_taken
       #here
       #originally here
       t.timestamps
