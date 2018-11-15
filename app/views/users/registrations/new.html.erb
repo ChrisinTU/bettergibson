@@ -24,12 +24,12 @@
      <div class="field">
         <%= f.label :grad_year %><br/>
 
-        <%= f.number_field(:grad_year,  in: 2012..2040, step: 1) %>
+        <%= f.number_field(:grad_year,  in: 2012..2040, step: 1, :required => true) %>
       </div>
     
       <div class="field">
         <%= f.label :major%><br/>
-        <%= f.collection_select :major, Major.order(:major_name),:id,:major_name, include_blank: true %>
+        <%= f.collection_select :major, Major.order(:major_name),:id,:major_name, include_blank: true, :required => true %>
       </div>
     
       <div class="field">
