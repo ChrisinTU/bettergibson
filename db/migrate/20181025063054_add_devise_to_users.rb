@@ -20,8 +20,8 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.0]
       t.change :major, :string,          :null => false, :default => ""
       t.change :first_name, :string,     :null => false, :default => ""
       t.change :last_name, :string,     :null => false, :default => ""
-      t.change :credits_taken, :integer,     :null => false, :default => ""
-      t.change :grad_year, :integer,     :null => false, :default => ""
+      t.change :credits_taken, :integer,     :null => false, :default => 0
+      t.change :grad_year, :integer,     :null => false, :default => 0
       #t.string :major
       #t.string :first_name
       #t.string :last_name
