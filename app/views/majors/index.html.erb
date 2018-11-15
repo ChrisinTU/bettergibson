@@ -10,12 +10,25 @@
 </style>
 
 <div class="container">
-    <h1>List of Majors</h1>
     
+    <h1>List of Majors</h1>
+    <br />
     <div class="btn btn-light">
     <%= link_to 'Add A New Major', "majors/new" %>
     </div>
-    
-    <br /><br /><br />
+    <br /> <br />
+    <div class="search_bar">
+    <%= form_tag("/majors", method: "get") do %>
+          <%= label_tag(:q, "Search for major:") %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+    <% end %>
+    <% @majors.each do |major| %>
+        <ul>
+            <li><%major.major_name%></li>
+        </ul>
+    <% end %>
+    </div>
+    <br />
     <%= render "shared/majorview"%>
 </div>

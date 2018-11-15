@@ -17,8 +17,16 @@ class User < ApplicationRecord
   def skip_confirmation!
       self.confirmed_at = Time.now.utc
   end
-  
-
+  #def is_admin
+    #if current_user.try(:admin?)
+     # return true
+    #else 
+    #  return false
+    #end
+  #end
+  #https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication
+  #https://github.com/plataformatec/devise/issues/4332
+  #https://github.com/plataformatec/devise/wiki/How-To:-Add-an-Admin-Role
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
