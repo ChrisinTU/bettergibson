@@ -176,12 +176,12 @@ Course.create(course_num: '74473', major_code:'CMPS', course_code: '2200', secti
 #user.skip_confirmation!
 #user.save!
 
-user = User.new(email: 'admin@bg.com', password: 'password!', password_confirmation: 'password!', admin: true)
-user.skip_confirmation!
-user.save!
+#user = User.new(email: 'admin@bg.com', password: 'password!', password_confirmation: 'password!', admin: true)
+#user.skip_confirmation!
+#user.save!
 
-  User.create!([
-  {email: "admin@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:02:10", last_sign_in_at: "2018-02-10 14:02:10", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true},
-  {email: "noah@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:03:01", last_sign_in_at: "2018-02-10 14:03:01", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false},
-])
+#User.create!([
+#  {email: "admin@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:02:10", last_sign_in_at: "2018-02-10 14:02:10", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true},
+#  {email: "noah@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:03:01", last_sign_in_at: "2018-02-10 14:03:01", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false},
+#])
 #>>>>>>> Stashed changes
