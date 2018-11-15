@@ -6,11 +6,13 @@ class MajorsController < ApplicationController
     def new
         @new_major = Major.new
     end
-    
+  
+  
+  
+
   def create 
   	new_major = Major.new(major_params)
   	if new_major.save 
-  	  
   	  flash[:success] = "Major is added!"
     	  redirect_to majors_path
   	else 

@@ -12,6 +12,13 @@ class User < ApplicationRecord
     #Besides :stretches, you can define :pepper, :encryptor, :confirm_within,  :remember_for, :timeout_in, :unlock_in among other options. 
     #For more details, see the initializer file that was created when you invoked the "devise:install" generator described above. 
     #This file is usually located at /config/initializers/devise.rb.
+        # If you don't want confirmation to be sent on create, neither a code
+      # to be generated, call skip_confirmation!
+  def skip_confirmation!
+      self.confirmed_at = Time.now.utc
+  end
+  
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email

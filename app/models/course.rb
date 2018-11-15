@@ -1,6 +1,6 @@
 class Course < ActiveRecord::Base
 
     belongs_to :major
-    belongs_to :user
+    #belongs_to :user
 
 end

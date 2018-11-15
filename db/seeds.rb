@@ -165,23 +165,5 @@ Course.create(course_num: '38295', major_code:'CPST', course_code: '4610', secti
 Course.create(course_num: '23085', major_code:'CPST', course_code: '2300', section: '81', name: 'Database Fundamentals', location: 'Elmwood', instructor: 'Sun', days: 'T', start_time:'6:00pm', end_time: '8:50pm', credits:'3', major_id: 3)
 Course.create(course_num: '74473', major_code:'CMPS', course_code: '2200', section: '01', name: 'Intro to Algorithms ', location: 'ST 302', instructor: 'Mettu, Ramgopal', days: 'MWF', start_time:'12:00pm', end_time: '12:50pm', credits:'3', major_id: 1)
 
-#User.create(email: 'admin@admin.com', encrypted_password: 'password', admin => true, )
-
-#user = User.new
-#user.email = 'test@example.com'
-#user.encrypted_password = '#$taawktljasktlw4aaglj'
-#user.save!
-#user = User.create! :name => 'John Doe', :email => 'john@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
-#user = User.new(:email => "admin@xxxxx.xxx",:password=> "123456", :password_confirmation => "123456")
-#user.skip_confirmation!
-#user.save!
-
-#user = User.new(email: 'admin@bg.com', password: 'password!', password_confirmation: 'password!', admin: true)
-#user.skip_confirmation!
-#user.save!
-
-#User.create!([
-#  {email: "admin@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:02:10", last_sign_in_at: "2018-02-10 14:02:10", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true},
-#  {email: "noah@bettergibson.com", password: "password", password_confirmation: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2018-02-10 14:03:01", last_sign_in_at: "2018-02-10 14:03:01", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false},
-#])
-#>>>>>>> Stashed changes
+admin = User.new(:email => "admin@bg.com",:password=> "password", :password_confirmation => "password", :encrypted_password => "password", :grad_year => 0, :credits_taken => 0, :admin => true)
+admin.save!
