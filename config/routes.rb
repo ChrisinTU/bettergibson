@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   get 'majors/:id' => 'majors#show', as: 'show_courses_in_this_major'
   post 'majors' => 'majors#create'
   
-  
+  resources :searches  
 
   # You can have the root of your site routed with "root"
 

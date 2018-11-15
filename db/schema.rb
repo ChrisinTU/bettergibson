@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181115011238) do
+ActiveRecord::Schema.define(version: 20181115191537) do
 
   create_table "classes_majors", id: false, force: :cascade do |t|
     t.integer "major_id", null: false
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20181115011238) do
     t.datetime "updated_at",  null: false
     t.integer  "majors_id"
     t.string   "major_code"
+    t.string   "major_name"
   end
 
   create_table "majors", force: :cascade do |t|
@@ -43,7 +44,9 @@ ActiveRecord::Schema.define(version: 20181115011238) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "students_id"
+    t.integer  "user_id"
     t.index ["students_id"], name: "index_majors_on_students_id"
+    t.index ["user_id"], name: "index_majors_on_user_id"
   end
 
   create_table "majors_students", id: false, force: :cascade do |t|
@@ -51,6 +54,15 @@ ActiveRecord::Schema.define(version: 20181115011238) do
     t.integer "major_id",   null: false
     t.index ["major_id"], name: "index_majors_students_on_major_id"
     t.index ["student_id"], name: "index_majors_students_on_student_id"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "primary_major"
+    t.string   "interest_1"
+    t.string   "interest_2"
+    t.string   "interest3"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "students", force: :cascade do |t|
@@ -65,13 +77,14 @@ ActiveRecord::Schema.define(version: 20181115011238) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "major",                  default: "",    null: false
-    t.string   "first_name",             default: "",    null: false
-    t.string   "last_name",              default: "",    null: false
-    t.string   "student_id"
-    t.integer  "grad_year",                              null: false
-    t.integer  "credits_taken",                          null: false
+    t.string   "major"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email",                  default: "",    null: false
+    t.integer  "grad_year"
+    t.integer  "credits_taken"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
