@@ -17,6 +17,8 @@
     <%= link_to 'Add A New Major', "majors/new" %>
     </div>
     <br /> <br />
+    <!--SEARcH BAR ref -->
+    <!--https://medium.com/@yassimortensen/simple-search-form-in-rails-8483739e4042-->
     <div class="search_bar">
     <%= form_tag("/majors", method: "get") do %>
           <%= label_tag(:q, "Search for major:") %>
