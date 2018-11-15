@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   #get 'welcome/index'
   root 'welcome#index'
+  get 'welcome/about' => 'welcome#about'
   #FIX: https://www.railstutorial.org/book/filling_in_the_layout/*
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -48,6 +49,8 @@ Rails.application.routes.draw do
   get 'majors/new' => 'majors#new'
   get 'majors/:id' => 'majors#show', as: 'show_courses_in_this_major'
   post 'majors' => 'majors#create'
+  
+  
 
   # You can have the root of your site routed with "root"
 
