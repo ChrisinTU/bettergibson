@@ -261,7 +261,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   #config.omniauth :facebook, '526757521176220', '2594912ffdd9281d63bc2ce0a26b10da'
   #config.omniauth :facebook, ENV['526757521176220'], ENV['2594912ffdd9281d63bc2ce0a26b10da']
-  config.omniauth :facebook, ENV['526757521176220'], ENV['2594912ffdd9281d63bc2ce0a26b10da'], scope: 'email'
+  #config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], scope: 'email'
+  config.omniauth :facebook, '526757521176220', '2594912ffdd9281d63bc2ce0a26b10da', scope: 'email', info_fields: 'email, first_name, last_name, major, credits_taken, grad_year'
 
 #You will be asked for a callback URL during the registration process, here you can add http://localhost:3000/users/auth/facebook/callback. This setting is listed under Client OAuth Settings in the dashboard.
 #Set the values in your shell like so,

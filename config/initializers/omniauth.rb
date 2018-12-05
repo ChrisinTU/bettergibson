@@ -1,5 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-    provider :facebook, ENV['526757521176220'], ENV['a649228a740ca3e58607eb2a0be44a07']
+    provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_ID']
 end
 ## OmniAuth.config.logger = Rails.logger
 # Rails.application.config.middleware.use OmniAuth::Builder do
@@ -8,5 +8,5 @@ end
 # App Secret: 2594912ffdd9281d63bc2ce0a26b10da
 # in your omniauth.rb initializer you type exactly:
 #Rails.application.config.middleware.use OmniAuth::Builder do
-#  provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
+#  provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_ID']
 #end
