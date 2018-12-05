@@ -12,7 +12,7 @@ class Search < ApplicationRecord
         interest_1 = '0'
       when !interest_2 || interest_2 == ''
         interest_2 = '0'
-      when !interest_3 || interest3 == ''
+      when !interest3 || interest3 == ''
         interest3 = '0'
       else
       end
