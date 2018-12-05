@@ -7,7 +7,7 @@ class Search < ApplicationRecord
     
     def find_courses
       courses = Course.order(:name)
-      if interest_1 == '' 
+      if !interest_1 || interest_1 == ''
         interest_1 == '0'
       end
       courses = courses.where("major_id = ? OR major_id = ? OR major_id = ? OR major_id = ?", primary_major, interest_1, interest_2, interest3) if primary_major.present?
