@@ -2,7 +2,7 @@ class CreateCourses < ActiveRecord::Migration
   def change
     create_table :courses do |t|
       t.string :course_num
-      t.string :major_id
+      t.integer :major_id
       t.string :course_code
       t.string :section
       t.string :name
