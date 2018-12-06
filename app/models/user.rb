@@ -38,6 +38,10 @@ class User < ApplicationRecord
       user.email = auth.info.email
       #user.provider = auth.provider
       #user.uid = auth.uid
+      ##GET NAME INFO
+      #user.first_name = auth.info.first_name
+      #user.name = auth.info.name
+      #user.last_name = auth.info.last_name
       user.password = Devise.friendly_token[0,20]
         if User.exists?(user)
           user
