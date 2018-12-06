@@ -254,7 +254,9 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
-
+  
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+  
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
@@ -262,12 +264,12 @@ Devise.setup do |config|
   #config.omniauth :facebook, '526757521176220', '2594912ffdd9281d63bc2ce0a26b10da'
   #config.omniauth :facebook, ENV['526757521176220'], ENV['2594912ffdd9281d63bc2ce0a26b10da']
   #config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], scope: 'email'
-  config.omniauth :facebook, 'FACEBOOK_KEY', 'FACEBOOK_SECRET', scope: 'email', info_fields: 'email, first_name, last_name, major, credits_taken, grad_year'
-
+  #config.omniauth :facebook, '526757521176220', '2594912ffdd9281d63bc2ce0a26b10da', scope: 'email' #, info_fields: 'email, first_name, last_name, major, credits_taken, grad_year'
+    #provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_ID']
 #You will be asked for a callback URL during the registration process, here you can add http://localhost:3000/users/auth/facebook/callback. This setting is listed under Client OAuth Settings in the dashboard.
 #Set the values in your shell like so,
-#export FACEBOOK_KEY=your_app_id 
-#export FACEBOOK_SECRET=your_app_secret
+#export FACEBOOK_KEY=526757521176220 
+#export FACEBOOK_SECRET=2594912ffdd9281d63bc2ce0a26b10da
 
 
 	#FACEBOOK_APP_ID: "526757521176220"
