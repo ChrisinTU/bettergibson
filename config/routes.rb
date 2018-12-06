@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   #devise_for :users
+  #get 'auth/facebook/callback', to: 'sessions#create'
+  #get 'auth/failure', to: redirect('/')
   devise_for :users, controllers: {
         sessions: 'users/sessions',
         registrations: 'users/registrations',
         #, registrations: 'user/registrations'
         omniauth_callbacks: 'users/omniauth_callbacks' 
   }
+
   #if you want user logged in vs non-logged in to have different root page.
   #sets up the log in page as root path for an unauthenticated user.
   #authenticated :user do
