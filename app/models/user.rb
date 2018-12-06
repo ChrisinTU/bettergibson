@@ -27,12 +27,24 @@ class User < ApplicationRecord
   #https://launchschool.com/blog/how-to-use-devise-in-rails-for-authentication
   #https://github.com/plataformatec/devise/issues/4332
   #https://github.com/plataformatec/devise/wiki/How-To:-Add-an-Admin-Role
+  #def self.create_with_omniauth(auth)
+  #user = find_or_create_by(uid: auth[‘uid’], provider:  auth[‘provider’])
+  #user.email = “#{auth[‘uid’]}@#{auth[‘provider’]}.com”
+  #user.password = auth[‘uid’]
+  #user.name = auth[‘info’][‘name’]
+  
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       #user.provider = auth.provider
       #user.uid = auth.uid
       user.password = Devise.friendly_token[0,20]
+        if User.exists?(user)
+          user
+        else
+          user.save!
+           user
+        end
     end      
   end
 end
