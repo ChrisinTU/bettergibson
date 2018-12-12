@@ -1,16 +1,16 @@
 <table class='courseslist' border=1>
         <tr class='head'>
-            <td>CRN</td>
-            <td>Course Code</td>
-            <td>Course Name</td>
-            <td>Location</td>
-            <td>Instructor</td>
-            <td>Days</td>
-            <td>Start</td>
-            <td>Finish</td>
-            <td>Credit Hours</td>
-            <td>Edit</td>
-            <td>Delete</td>
+            <th>CRN</th>
+            <th>Course Code</th>
+            <th onclick="w3.sortHTML('#courseslist','.courses', 'td:nth-child(1)')">Course Name</th>
+            <th>Location</th>
+            <th>Instructor</th>
+            <th>Days</th>
+            <th>Start</th>
+            <th>Finish</th>
+            <th>Credit Hours</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
         <% classname = 'rowA' %>
         
@@ -37,3 +37,6 @@
         <% end %>
 </table>
 <%= will_paginate @courses, previous_label: h("<"), next_label: h(">") %>
+
+
+
