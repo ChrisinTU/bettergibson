@@ -21,6 +21,7 @@ class Users::SessionsController < Devise::SessionsController
   # protected
   
   def create
+    super
     if request.env[‘omniauth.auth’]
       user = User.create_with_omniauth(request.env[‘omniauth.auth’])
       session[:user_id] = user.id    
@@ -36,6 +37,6 @@ class Users::SessionsController < Devise::SessionsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_in_params
      #devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-     devise_parameter_sanitizer.permit(:sign_in, keys: [:username, :email, :first_name, :last_name, :major, :gradyear, :password, :password_confirmation])
+     devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :first_name, :last_name, :major, :grad_year, :credits_taken, :password, :password_confirmation])
   end
 end
