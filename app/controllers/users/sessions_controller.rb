@@ -19,10 +19,17 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # protected
+  def destroy
+    super
+  	session[:user_id] = nil
+  	redirect_to root_path
+  end
   
   def create
     super
     if request.env[‘omniauth.auth’]
+      @user = User.find_or_create_from_auth_hash(env["omniauth.auth"])
+      #session[:user_id] = @user.id    
       user = User.create_with_omniauth(request.env[‘omniauth.auth’])
       session[:user_id] = user.id    
       redirect_to user_path(user.id)

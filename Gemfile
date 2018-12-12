@@ -59,6 +59,8 @@ group :development, :test do
    # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   
+  gem 'foreman'
+  #for gmail forgot password set up PW in .env
 end
 
 group :development do
@@ -70,7 +72,10 @@ group :development do
   gem 'spring'
   #gem 'annotate', '2.5.0'
 
+
 end
+
+
 
 group :production do
   #Heroku loves these two gems

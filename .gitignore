@@ -18,3 +18,7 @@
 
 # Ignore application configuration
 /config/application.yml
+
+#IGNORE WHERE PW are SAVED
+.env
+Procfile
