@@ -3,10 +3,13 @@ class User < ApplicationRecord
   #has_many :courses
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :registerable,
          :recoverable, :rememberable, :validatable
          #, :omniauthable, omniauth_providers: [:facebook]
   devise :omniauthable, :omniauth_providers => [:facebook]
+  #ADD?
+  devise :database_authenticatable, :authentication_keys => [:email]
+  #validates :email, uniqueness: true
     #https://guides.railsgirls.com/devise
     #devise :database_authenticatable, :registerable, :confirmable, :recoverable, stretches: 12
     #Besides :stretches, you can define :pepper, :encryptor, :confirm_within,  :remember_for, :timeout_in, :unlock_in among other options. 

@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
   #def devise_parameter_sanitizer
     #if resource_class == User
       #User::ParameterSanitizer.new(User, :user, params)
-      #keys: [:attribute, :username, :email, :first_name, :last_name, :studentid, :major, :gradyear, :password, :password_confirmation])
+      #keys: [:attribute, :username, :email, :first_name, :last_name, :major, :grad_year, :credits_taken, :password, :password_confirmation])
   
     #else
       #super # Use the default one
