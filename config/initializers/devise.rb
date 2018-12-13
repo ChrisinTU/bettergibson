@@ -253,9 +253,12 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
+
   config.sign_out_via = :delete
   config.authentication_keys = [:email]
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
+   #config.omniauth :facebook, "APP_ID", "APP_SECRET", token_params: { parse: :json }
+
   #ADD TO END OF ^:?     scope: 'email', info_fields: 'email, first_name, last_name'
   # Rails.application.secrets.facebook_app_secret, scope: 'public_profile', info_fields: 'id,name,email'
 

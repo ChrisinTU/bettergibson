@@ -4,9 +4,19 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :omniauthable, :omniauth_providers=> [:facebook]
+
          #, :omniauthable, omniauth_providers: [:facebook]
-  devise :omniauthable, :omniauth_providers => [:facebook]
+
+  validates :email,
+    presence: true,
+    on: :create,
+    allow_nil: false
+    
+  #ADD?
+  #devise :database_authenticatable, :authentication_keys => [:email]
+  #validates :email, uniqueness: true
     #https://guides.railsgirls.com/devise
     #devise :database_authenticatable, :registerable, :confirmable, :recoverable, stretches: 12
     #Besides :stretches, you can define :pepper, :encryptor, :confirm_within,  :remember_for, :timeout_in, :unlock_in among other options. 
@@ -34,26 +44,30 @@ class User < ApplicationRecord
   #user.name = auth[‘info’][‘name’]
   
   def self.from_omniauth(auth)
-    	where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
-      #where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    #where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
-      user.provider = auth.provider
+      user.password = Devise.friendly_token[0,20]
+      #user.provider = auth.provider
 			user.uid = auth.uid
 			user.first_name = auth.info.first_name
 			user.last_name = auth.info.last_name
-	
+	   # If you are using confirmable and the provider(s) you use validate emails, 
+      # uncomment the line below to skip the confirmation emails.
+      # user.skip_confirmation!
+      
       #user.provider = auth.provider
       #user.uid = auth.uid
       ##GET NAME INFO
       #user.first_name = auth.info.first_name
       #user.name = auth.info.name
       #user.last_name = auth.info.last_name
-      user.password = Devise.friendly_token[0,20]
         if User.exists?(user)
           user
+          #return user
         else
           user.save!
-           user
+          user
         end
     end      
   end
