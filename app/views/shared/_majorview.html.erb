@@ -1,11 +1,14 @@
-<table class='majorslist' border=1>
+<table id="majortable" class="table table-hover" border=1>
+        <thead>
         <tr class='head'>
-            <th>Majors</th>
+            <th>Major</th>
             <th>View Courses</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
         <% majorname = 'rowA' %>
+        </thead>
+        <tbody>
         <% @majors.each do |major| %>
             <tr class=<%= majorname %>>
                 <td><%=major.major_name %></td>
@@ -19,6 +22,7 @@
                 <% majorname = 'rowA' %>
             <% end %>
         <% end %>
+</tbody>
 </table>
 </br>
 <%= will_paginate @majors, previous_label: h("<"), next_label: h(">") %>
