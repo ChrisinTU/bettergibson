@@ -4,36 +4,37 @@
   <%= devise_error_messages! %>
    <div class="field">
         <%= f.label :first_name %><br />
-        <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+        <%= f.text_field :first_name, autofocus: true %>
    </div>
       
    <div class="field">
         <%= f.label :last_name %><br />
-        <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+        <%= f.text_field :last_name, autofocus: true%>
   </div>
       
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true %>
     </div>
-    
+
+      
      <div class="field">
         <%= f.label :grad_year %><br/>
-        <%= f.text_field :grad_year, autofocus: true, autocomplete: "grad_year" %>
+
+        <%= f.number_field(:grad_year,  in: 2012..2040, step: 1) %>
       </div>
     
       <div class="field">
         <%= f.label :major%><br/>
-        <%= f.text_field :major, autofocus: true, autocomplete: "major" %> 
+        <%= f.collection_select :major, Major.order(:major_name),:id,:major_name, include_blank: true %>
       </div>
     
       <div class="field">
         <%= f.label :credits_taken %><br/>
-        <%= f.text_field :credits_taken, autofocus: true, autocomplete: "credits_taken" %>
-      
+        <%= f.text_field :credits_taken %>
+        <!-- ADD  :required => true-->
       </div>
-      
-     
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
