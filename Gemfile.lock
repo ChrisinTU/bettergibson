@@ -237,4 +237,4 @@ DEPENDENCIES
   will_paginate (> 3.0)
 
 BUNDLED WITH
-   2.0.0.pre.2
+   1.17.0.pre.2
