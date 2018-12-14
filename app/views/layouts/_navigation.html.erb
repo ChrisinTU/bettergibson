@@ -24,9 +24,12 @@
   <li><%= link_to 'About', welcome_about_path %></li>
   <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
   <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
- 
   </ul>
   
 <% end %>
 </div>
 
+
+<!--
+       <PERCENT= link_to(image_tag("/images/connect_with_facebook_button.png", class:"fb-login-btn", :alt => "fb Login", :title => "FBLOGIN"), omniauth_authorize_path(resource_name, provider), :class=>"btn-btn") %>
+       -->

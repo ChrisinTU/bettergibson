@@ -2,10 +2,18 @@
   <div class="row">
   <div class="col-md-5 col-md-offset-2">
     <h2>Sign up</h2>
-    
+  
+  <%- if devise_mapping.omniauthable? %>
+    <% resource_class.omniauth_providers.each do |provider| %>
+       <br />
+       <%= link_to(image_tag("/images/connect_with_facebook_button.png", class:"fb-login-btn", :alt => "fb Login", :title => "Sign Up With Facebook"), omniauth_authorize_path(resource_name, provider), :class=>"btn-btn") %>
+       
+    <% end -%>
+<% end -%>
+  
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
-
+        <br />
       <div class="field">
         <%= f.label :first_name %><br />
         <%= f.text_field :first_name, autocomplete: "first name"%>
@@ -52,6 +60,7 @@
       </div>
       
       <div class="actions">
+        <br />
         <%= f.submit "Sign up" %><br />
       </div>
     <% end %>
