@@ -21,4 +21,5 @@
 /*global $*/
 $(document).ready( function () {
       $('#sorted_table').DataTable();
+      
       } );

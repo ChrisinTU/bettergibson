@@ -1,6 +1,6 @@
 class MajorsController < ApplicationController
     def index
-        @majors = Major.order("major_name").page(params[:page]).per_page(10)
+        @majors = Major.all()
     end
     
     def new
