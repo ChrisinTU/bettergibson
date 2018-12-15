@@ -1,0 +1,2 @@
+module SearchmajorsHelper
+end
