@@ -19,7 +19,7 @@
 //= require_tree .
 
 /*global $*/
-$(document).ready( function () {
-      $('#sorted_table').DataTable();
+// $(document).ready( function () {
+//       $('#sorted_table').DataTable();
       
-      } );
+//       } );
