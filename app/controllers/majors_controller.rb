@@ -44,7 +44,6 @@ class MajorsController < ApplicationController
       @major = Major.find(params[:id])
       a = @major.id
       @courses = Course.where('major_id = ?', a)
-    #   @courses = Course.where("major_id = 'CMPS'")
   end
 
   private

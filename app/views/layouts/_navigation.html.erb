@@ -10,7 +10,7 @@
   <li><%= link_to 'About', welcome_about_path %></li>
   <li><%= form_tag(search_page_path, :method => "get",   
     class: 'navbar-form navbar-left') do %>  
-  <div class="input-group">  
+  <div class="input-group" align= 'right'>  
     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
     <div class="input-group-btn">  
       <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
