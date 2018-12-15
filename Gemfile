@@ -15,6 +15,8 @@ gem 'devise' #for user login/authentication
 gem 'omniauth-facebook'
 # Development ENV Variables
 gem 'figaro' ,'~>1.1'
+gem 'jquery-datatables-rails', '~> 3.4.0'
+
 #gem 'strong_parameters', '~> 0.2.3'
 #strong parameters for devise
 #gem "cancan"
