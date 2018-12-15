@@ -55,6 +55,8 @@ Rails.application.routes.draw do
   post 'majors' => 'majors#create'
   
   resources :searches  
+  
+  get '/search' => 'pages#search', :as => 'search_page'
 
   # You can have the root of your site routed with "root"
 
