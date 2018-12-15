@@ -9,7 +9,8 @@
     .rowB{background-color:white;}
 </style>
 <h1><%= @major.major_name %></h1>
-<table class='courseslist' border=1>
+<table id = "sorted_table" class="table table-hover display" border=1>
+    <thead>
     <tr class='head'>
         <td>CRN</td>
         <td>Course Code</td>
@@ -22,6 +23,7 @@
         <td>Credit Hours</td>
     </tr>
     <% classname = 'rowA' %>
+    </thead>
     <% @courses.each do |course| %>
         <tr class=<%= classname %>>
             <td><%=course.course_num %></td>
