@@ -42,6 +42,15 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Cucumber Setup
+group :test, :development do
+  gem 'cucumber-rails', :require=>false
+  gem 'cucumber-rails-training-wheels'#some pre-fabbed step definitions
+  gem 'database_cleaner'# to clear Cucmber's test database between runs
+  gem 'capybara' #lets Cucumber pretend to be a web browser
+  gem 'launchy' # a useful debugging aid for user stories
+end
+
 gem 'will_paginate', '> 3.0'
 
 gem 'pg_search'
