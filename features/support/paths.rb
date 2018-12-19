@@ -16,12 +16,17 @@ module NavigationHelpers
       '/'
     when "majors"
       '/majors'
-    when "the Add A New Major page"
-      '/majors/new'
+    when "courses"
+      '/courses'
+    when "the Recommender page"
+      '/searches/new'
     when "the Login page"
       '/users/sign_in'
     when "the Sign up page"  
       '/users/sign_up'
+    when "the Edit user page"
+      '/users/edit'
+      
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

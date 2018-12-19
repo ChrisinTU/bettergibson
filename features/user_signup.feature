@@ -1,5 +1,5 @@
-# cucumber features/user_activity.feature
-Feature: user login/logout activities
+# cucumber features/user_signup.feature
+Feature: user Signup activities
   
   Scenario: user can sign up (happy)
     Given I am on the courseRecommender home page
